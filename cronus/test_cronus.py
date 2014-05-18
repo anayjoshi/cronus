@@ -2,11 +2,11 @@ import cronus
 
 class TestCronus:
 
-    def setup():
+    def setup(self):
         pass
 
-    def teardown():
+    def teardown(self):
         pass
 
-    def test_raw_sleep():
+    def test_raw_sleep(self):
         pass
