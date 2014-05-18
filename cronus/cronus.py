@@ -1,3 +1,7 @@
+"""
+Implements the cronus library
+"""
+
 import datetime
 import time
 
@@ -5,6 +9,11 @@ loop_start_time = None
 loop_duration = 0
 
 def set_rate(rate):
+    """Defines the ideal rate at which computation is to be performed
+
+    Arguments:
+    rate -- the frequency in Hertz (int or float)
+    """
     if not (isinstance(rate, int) or isinstance(rate, float)):
         raise TypeError("argument to set_rate is expected to be int or float")
     global loop_duration
@@ -12,6 +21,7 @@ def set_rate(rate):
     pass
 
 def sleep():
+    """Sleeps for a dynamic duration of time as determined by set_rate() and true()."""
     if loop_duration == 0:
         raise CronusError("call cronus.set_rate() before calling sleep")
     if loop_start_time == None:
@@ -23,6 +33,7 @@ def sleep():
     time.sleep(duration_to_sleep)
 
 def true():
+    """A substitute to True. Stores the time at which this function for use by sleep()"""
     global loop_start_time
     loop_start_time = datetime.datetime.now()
     return True
