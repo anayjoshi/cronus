@@ -7,7 +7,7 @@ setup(name='cronus',
     author='Anaykumar Joshi',
     author_email='anaykumar.joshi@gmail.com',
     license='',
-    packages=['cronus']
+    packages=['cronus'],
     install_requires=[
     ],
     scripts=[

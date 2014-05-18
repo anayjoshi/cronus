@@ -1,4 +1,4 @@
-import cronus
+import core
 
 class TestCronus:
 
