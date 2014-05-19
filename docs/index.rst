@@ -18,10 +18,10 @@ Cronus is a useful little library for performing certain computation at a fixed 
 
 .. code-block:: python
 
-    cronus.set_rate(3)
+    cronus.set_rate(2) # 2 Hz
     while cronus.true():
         # do some time consuming work here
-        cronus.sleep()
+        cronus.sleep() # total loop duration would be 0.5 sec
 
 as opposed to
 
