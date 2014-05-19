@@ -2,3 +2,4 @@
 cronus.egg-info/
 dist/
 build/
+docs/_build/
