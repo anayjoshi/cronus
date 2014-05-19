@@ -12,9 +12,6 @@ Contents:
    :maxdepth: 2
 
 
-Usage
------
-
 Consider the following snippet of program. The aim is to call the function `do_some_work` at a 2 Hz frequency.
 
 .. code-block:: python
@@ -32,7 +29,7 @@ Consider the following snippet of program. The aim is to call the function `do_s
             time.sleep(0.5)
             print datetime.datetime.now()
 
-Unfortunately, the above methodology does not take into account the execution time taken by the function `do_some_work`. Cronus is meant to solve the above mentioned problem.
+Unfortunately, the above methodology does not take into account the time taken by the function `do_some_work`. Cronus is meant to solve the above mentioned problem.
 
 
 .. code-block:: python
@@ -42,7 +39,6 @@ Unfortunately, the above methodology does not take into account the execution ti
     import datetime
 
     def do_some_work():
-        # sleep simulates some work
         time.sleep(0.3)
 
     if __name__ == "__main__":
