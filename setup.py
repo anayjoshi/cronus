@@ -6,7 +6,7 @@ setup(name='cronus',
     url='http://github.com/anayjoshi/cronus',
     author='Anaykumar Joshi',
     author_email='anaykumar.joshi@gmail.com',
-    license='',
+    license='BSD',
     packages=['cronus'],
     install_requires=[
     ],
