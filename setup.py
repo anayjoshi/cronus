@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='cronus',
-    version='0.1',
+    version='0.2',
     description='The Greek God of Time',
     url='http://github.com/anayjoshi/cronus',
     author='Anaykumar Joshi',
