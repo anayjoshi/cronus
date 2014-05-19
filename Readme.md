@@ -1,5 +1,8 @@
 # Cronus
 
+
+## Purpose
+
 Consider the following snippet of program. The aim is to call the function `do_some_work` at a 2 Hz frequency.
 
 ```
@@ -19,6 +22,7 @@ if __name__ == "__main__":
 
 Unfortunately, the above methodology does not take into account the time taken by the function `do_some_work`. Cronus is meant to solve the above mentioned problem.
 
+## Usage
 
 ```
 import cronus
@@ -36,3 +40,22 @@ if __name__ == "__main__":
         cronus.sleep()
         print datetime.datetime.now()
 ```
+
+## Install
+
+```
+pip install cronus
+```
+
+or 
+
+```
+git clone http://github.com/anayjoshi/cronus
+python setup.py install
+```
+
+The documentation of cronus can be found [here](http://cronus.readthedocs.org)
+
+## TODO
+
+* Support for Python3
