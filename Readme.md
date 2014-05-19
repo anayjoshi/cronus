@@ -1,6 +1,7 @@
 Cronus
 ======
 
+Cronus was the Greek God of Time. This package ofcourse, has something to do with time!
 
 Purpose
 -------
