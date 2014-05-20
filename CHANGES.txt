@@ -1,0 +1,5 @@
+0.2 is **not** a feature improvement over 0.1
+It simple adds up the following
+
+* documentation
+* unit tests
