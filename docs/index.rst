@@ -16,6 +16,12 @@ Contents:
 
 Cronus is a useful little library for performing certain computation at a fixed frequency, by being agnostic to the time taken by the computation.
 
+.. code-block:: console
+
+    pip install cronus
+
+Cronus implements a dynamic *sleep()* function to ensure a fixed loop frequency
+
 .. code-block:: python
 
     cronus.set_rate(2) # 2 Hz
