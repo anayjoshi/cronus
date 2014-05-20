@@ -64,3 +64,4 @@ TODO
 ----
 
 * Support for Python3
+* Support for multiple threads
