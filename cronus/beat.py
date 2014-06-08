@@ -27,16 +27,17 @@ def set_rate(rate):
 def sleep():
     """Sleeps for a dynamic duration of time as determined by set_rate() and true().
     
-    :raises: OvertimeError: if this function is called before calling set_rate() or 
-    before calling true()"""
+    :raises: BeatError: if this function is called before calling set_rate() or \
+            before calling true()
+    """
     if loop_duration == 0:
-        raise OvertimeError("call beat.set_rate() before calling sleep")
+        raise BeatError("call beat.set_rate() before calling sleep")
     if loop_start_time == None:
-        raise OvertimeError("call beat.true() before calling sleep")
+        raise BeatError("call beat.true() before calling sleep")
     td = datetime.datetime.now() - loop_start_time
     duration_to_sleep = loop_duration - td.total_seconds()
     if duration_to_sleep < 0:
-        raise OvertimeError("skipping sleep. Too much work!")
+        raise BeatError("skipping sleep. Too much work!")
     time.sleep(duration_to_sleep)
 
 def true():
@@ -49,7 +50,7 @@ def true():
     return True
 
 
-class OvertimeError:
+class BeatError:
 
     def __init__(self, msg):
         self.msg = msg

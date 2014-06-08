@@ -24,16 +24,16 @@ class TestCronus:
         assert_raises(TypeError, lambda: beat.set_rate("hi"))
 
     def test_exception_when_no_rate(self):
-        """Tests that OvertimeError is raised when sleep() is called before
+        """Tests that BeatError is raised when sleep() is called before
         calling set_rate()"""
         beat.true()
-        assert_raises(beat.OvertimeError, beat.sleep)
+        assert_raises(beat.BeatError, beat.sleep)
 
     def test_exception_when_no_true(self):
-        """Tests that OvertimeError is raised when sleep() is called before
+        """Tests that BeatError is raised when sleep() is called before
         calling true()"""
         beat.set_rate(2)
-        assert_raises(beat.OvertimeError, beat.sleep)
+        assert_raises(beat.BeatError, beat.sleep)
 
     def test_normal_operation(self):
         """Tests that beat sleeps for approproate duration in normal operation"""
