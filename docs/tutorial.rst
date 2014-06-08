@@ -23,12 +23,12 @@ Cronus implements a dynamic *sleep()* function to ensure a fixed loop frequency.
             time.sleep(0.5)
             print datetime.datetime.now()
 
-Unfortunately, the above methodology does not take into account the time taken by the function `do_some_work`. Cronus is meant to solve the above mentioned problem.
+Unfortunately, the above methodology does not take into account the time taken by the function `do_some_work`. Cronus helps us solve this.
 
 
 .. code-block:: python
 
-    import cronus
+    import cronus.beat as beat
     import time
     import datetime
 
@@ -37,46 +37,48 @@ Unfortunately, the above methodology does not take into account the time taken b
 
     if __name__ == "__main__":
         # specify rate in Hz
-        cronus.set_rate(2)
-        while cronus.true():
+        beat.set_rate(2)
+        while beat.true():
             do_some_work()
-            cronus.sleep()
+            beat.sleep()
             print datetime.datetime.now()
 
 
 Forceful Timeout
 ----------------
 
-Consider the following function
+Several times, I wanted to forcefully timeout some function which relies on third party functions, as the third party functions just don't timeout as they promise!
 
 .. code-block:: python
-    
+
     import time
 
-    def dummy_computation():
+    def third_party_function():
         time.sleep(5)
         return "hello world"
 
     if __name__ == "__main__":
-        reply = dummy_computation()
+        reply = third_party_function()
         print reply
-        
-If now, say we want to forcefully timeout the `dummy_computation` function. If this function has been implemented in some other package, we wont be able to change the source of this function. Cronus implements a `@timeout` decorator exactly for such situations!
+
+If now, say we want to forcefully timeout the `third_party_function` function. If this function has been implemented in some other package, we wont be able to change the source of this function. Cronus implements a `@timeout` decorator exactly for such situations!
 
 .. code-block:: python
-    
-    import time
-    import cronus
 
-    @cronus.timeout(1)
-    def dummy_computation():
+    import time
+    from cronus.timeout import timeout, TimeoutError
+
+    @timeout(1)
+    def third_party_function():
         time.sleep(5)
         return "hello world"
 
     if __name__ == "__main__":
         try:
-            reply = dummy_computation()
-        except cronus.TimeoutError:
+            reply = third_party_function()
+        except TimeoutError:
             print "timeout"
         else:
             print reply
+
+Try reducing the sleep duration in `third_party_function` to say, 0.5 seconds. Things would work as you expect!

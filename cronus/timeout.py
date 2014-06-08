@@ -28,8 +28,11 @@ def timeout(duration):
     :param int duration: the timeout duration
 
     :raises: TypeError, if duration is anything other than integer
+
     :raises: ValueError, if duration is a negative integer
+
     :raises TimeoutError, if the external function execution crosses 'duration' time
+
     """
     if not isinstance(duration, int):
         raise TypeError("timeout duration should be a positive integer")

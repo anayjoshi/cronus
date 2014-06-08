@@ -1,13 +1,13 @@
 Cronus Implementation
 =====================
 
-Implementation withing cronus is divided into two sub-packages: `beat` and `timeout`
+Implementation withing cronus is divided into two modules: `beat` and `timeout`
 
 
 beat
 ----
 
-The `beat` package implements the fixed frequency feature
+The `beat` module implements the fixed frequency feature
 
 .. autofunction:: beat.set_rate
 
@@ -23,7 +23,7 @@ The `beat` package implements the fixed frequency feature
 timeout
 -------
 
-The `timeout` package implements, obviously, the timeout feature
+The `timeout` module implements, obviously, the timeout feature
 
 .. autofunction:: timeout.timeout
 

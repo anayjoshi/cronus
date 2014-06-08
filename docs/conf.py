@@ -18,7 +18,7 @@ import os
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.insert(0, os.path.abspath('/Users/anaykumarjoshi/devcodes/github/cronus/cronus'))
+sys.path.insert(0, os.path.abspath('../cronus'))
 
 # -- General configuration ------------------------------------------------
 
@@ -50,7 +50,7 @@ copyright = u'2014, Anaykumar Joshi'
 # built documents.
 #
 # The short X.Y version.
-version = '0.1'
+version = '0.2'
 # The full version, including alpha/beta/rc tags.
 release = '0.1'
 
