@@ -12,7 +12,7 @@ Contents:
    :maxdepth: 2
 
    tutorial
-   cronus
+   implementation
 
 Cronus is a useful little library for performing certain computation at a fixed frequency, by being agnostic to the time taken by the computation.
 

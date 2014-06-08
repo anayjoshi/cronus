@@ -1,5 +1,8 @@
 """
-Implements the cronus library
+Implements the beat library
+
+Author: Anay
+Date created: 19th May 2014
 """
 
 import datetime
@@ -24,20 +27,20 @@ def set_rate(rate):
 def sleep():
     """Sleeps for a dynamic duration of time as determined by set_rate() and true().
     
-    :raises: CronusError: if this function is called before calling set_rate() or 
+    :raises: OvertimeError: if this function is called before calling set_rate() or 
     before calling true()"""
     if loop_duration == 0:
-        raise CronusError("call cronus.set_rate() before calling sleep")
+        raise OvertimeError("call beat.set_rate() before calling sleep")
     if loop_start_time == None:
-        raise CronusError("call cronus.true() before calling sleep")
+        raise OvertimeError("call beat.true() before calling sleep")
     td = datetime.datetime.now() - loop_start_time
     duration_to_sleep = loop_duration - td.total_seconds()
     if duration_to_sleep < 0:
-        raise CronusError("skipping sleep. Too much work!")
+        raise OvertimeError("skipping sleep. Too much work!")
     time.sleep(duration_to_sleep)
 
 def true():
-    """A substitute to True. Use 'while cronus.true()' instead of 'while True'
+    """A substitute to True. Use 'while beat.true()' instead of 'while True'
     
     :returns: True
     """
@@ -46,7 +49,7 @@ def true():
     return True
 
 
-class CronusError:
+class OvertimeError:
 
     def __init__(self, msg):
         self.msg = msg

@@ -1,15 +1,15 @@
-Cronus API
-==========
+Cronus Implementation
+=====================
 
 The three main functions defining Cronus's API are mentioned below
 
-.. autofunction:: cronus.set_rate
+.. autofunction:: beat.set_rate
 
 
-.. autofunction:: cronus.true
+.. autofunction:: beat.true
 
 
-.. autofunction:: cronus.sleep
+.. autofunction:: beat.sleep
 
 
 
