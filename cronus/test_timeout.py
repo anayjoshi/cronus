@@ -1,7 +1,6 @@
 """
 Tests for @timeout decorator
 
-Author: Anay
 Date created: 8th June 2014
 """
 from timeout import timeout, TimeoutError

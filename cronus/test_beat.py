@@ -1,7 +1,6 @@
 """
 Test cases for beat module
 
-Author: Anay
 Date created: 20th May 2014
 """
 

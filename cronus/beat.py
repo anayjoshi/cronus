@@ -1,7 +1,6 @@
 """
 Implements the beat library
 
-Author: Anay
 Date created: 19th May 2014
 """
 

@@ -4,7 +4,6 @@ Implements the timeout decorator, and the TimeoutError exception.
 The timeout mechanism is implemented using UNIX signals. As of now,
 only integer value for timeouts in permitted
 
-Author: Anay
 Date created: 8th June 2014
 """
 
