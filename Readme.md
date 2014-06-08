@@ -2,8 +2,9 @@ Cronus
 ======
 
 Cronus implements commonly time-based utilities. As of now, cronus implements two features:
-1. Allows a continuous while loop to run a fixed frequency
-2. Implements a @timeout decorator to focefully timeout an external function
+
+* Allows a continuous while loop to run a fixed frequency
+* Implements a @timeout decorator to focefully timeout an external function
 
 Install
 -------
