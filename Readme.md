@@ -1,16 +1,25 @@
 ![Cronus](/docs/_static/cronus-extended-logo.png?raw=true "Cronus Logo")
 
+Cronus is a collection of utilities to force timing restrictions on computation in Python
+
 ## Install
 
 ```
 pip install cronus
 ```
 
+or
+
+```
+git clone http://github.com/anayjoshi/cronus
+python setup.py install
+```
+
 ## Usage
 
 As of now, Cronus implements two features:
 
-* Allows a continuous while loop to run at fixed frequency
+* Allows a continuous while loop to run at a fixed frequency
 
 ```python
 import cronus.beat as beat
@@ -29,7 +38,7 @@ if __name__ == "__main__":
         print datetime.datetime.now()
 ```
 
-* Implements a @timeout decorator to forcefully timeout an external function
+* Implements a `@timeout` decorator to forcefully timeout a function call
 
 ```python
 import time
