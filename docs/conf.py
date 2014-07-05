@@ -267,6 +267,7 @@ html_sidebars = {
    ]
 }
 html_theme_options = {
+    'logo': 'cronus-logo.png',
     'github_user': 'anayjoshi',
     'github_repo': 'cronus',
 }
