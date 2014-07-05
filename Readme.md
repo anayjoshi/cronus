@@ -1,4 +1,4 @@
-![Cronus](/docs/img/cronus-extended-logo.png?raw=true "Cronus Logo")
+![Cronus](/docs/_static/cronus-extended-logo.png?raw=true "Cronus Logo")
 
 Cronus implements commonly used time-based utilities. As of now, cronus implements two features:
 
